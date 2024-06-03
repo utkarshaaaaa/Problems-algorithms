@@ -1,24 +1,19 @@
 package Binary_Search_problems;
+//greatest number smaller or equal to the target number 
 
-//used in sorted array
-//worst case time comp = logN\
-//dividing the given array in half till the target is found 
-
-
-
-public class binarysearch {
-
+//condition  out of loop - end mid start
+public class floorOfNumber {
     public static void main(String[] args) {
-        int[] arr={2,0,3,5,9,1,12,31,7};
-        
-        
-        System.out.println(" The index of the target "+  BinarySearch(arr, 0));
+
+        int [] arr={2,3,5,9,14,16,18};
+
+        System.out.println("Found number"+" "+ floor(arr, 14));
 
     }
-
-    static int BinarySearch(int[] arr,int target){
+    static int floor(int[] arr,int target){
         int start=0;
-        int end=arr.length-1;
+        int end=arr.length -1;
+
 
         while (start <= end) {
             int middle= start + (end -start)/2;
@@ -40,8 +35,9 @@ public class binarysearch {
             }
         
         }
-         return -1;
-       
+        return arr[end];
+
+        
+
     }
-    
 }
