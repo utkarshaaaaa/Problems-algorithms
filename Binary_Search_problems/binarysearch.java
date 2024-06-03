@@ -12,7 +12,7 @@ public class binarysearch {
         int[] arr={2,0,3,5,9,1,12,31,7};
         
         
-        System.out.println(" The index of the target "+  BinarySearch(arr, 2));
+        System.out.println(" The index of the target "+  BinarySearch(arr, 0));
 
     }
 
@@ -22,6 +22,10 @@ public class binarysearch {
 
         while (start <= end) {
             int middle= start + (end -start)/2;
+
+            if(arr[middle]==target){
+                return middle;
+            }
 
             if(target <arr[middle]){
                  end=middle -1;
