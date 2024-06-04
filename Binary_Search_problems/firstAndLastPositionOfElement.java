@@ -22,9 +22,7 @@ public class firstAndLastPositionOfElement{
         ans[0]=start;
         ans[1]=end;
 
-        return ans;
-
-        
+        return ans;     
     }
 
     public static int search(int [] nums,int target,boolean findIndex){
@@ -32,12 +30,13 @@ public class firstAndLastPositionOfElement{
         int start=0;
         int end=nums.length-1;
         int ans=-1;
-        
+
         while(end>=start){
             
             int middle= start + (end -start)/2; 
 
             if(target>nums[middle]){
+                
                 start=middle +1;
             }else if(target<nums[middle]){
                 end=middle-1;
