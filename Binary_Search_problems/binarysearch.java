@@ -9,10 +9,10 @@ package Binary_Search_problems;
 public class binarysearch {
 
     public static void main(String[] args) {
-        int[] arr={2,0,3,5,9,1,12,31,7};
+        int[] arr={2,0,3,5,5,9,1,12,31,7};
         
         
-        System.out.println(" The index of the target "+  BinarySearch(arr, 0));
+        System.out.println(" The index of the target "+  BinarySearch(arr, 5));
 
     }
 
