@@ -1,7 +1,8 @@
 package Binary_Search_problems;
 
 //used in sorted array
-//worst case time comp = logN\
+//worst case time comp = logN
+//most probably used when given array is sorted
 //dividing the given array in half till the target is found 
 
 
