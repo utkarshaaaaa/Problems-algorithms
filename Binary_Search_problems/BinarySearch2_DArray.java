@@ -9,14 +9,11 @@ public class BinarySearch2_DArray {
         int[][] arr={
             {10,20,30,40},
             {15,25,35,45},
-            {28,29,35,49},
+            {28,29,37,49},
             {33,34,38,50}
         };
 
-        System.out.println(""+ " "+Arrays.toString(rowcol(arr, 35)));
-
-
-        
+        System.out.println(""+ " "+Arrays.toString(rowcol(arr, 35)));       
     }
 public static int[] rowcol(int[][] matirx,int target){
 
