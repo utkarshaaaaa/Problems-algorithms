@@ -8,8 +8,7 @@ public class Count_1s_binary {
     }
     static void printTwoElements(int[] arr, int n)
     {
-        int[] temp
-            = new int[n]; 
+        int[] temp = new int[n]; 
         int repeatingNumber = -1;
         int missingNumber = -1;
 
