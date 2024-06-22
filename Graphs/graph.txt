@@ -1,0 +1,9 @@
+graph basics:
+graph=node+edges
+directed(with edges) and undirected graphs(without edges)
+
+dfs uses stack
+bfs uses queues
+
+
+
