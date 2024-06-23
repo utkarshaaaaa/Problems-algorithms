@@ -3,7 +3,7 @@ import java.util.*;
 
 import String.strings;
 
-public class Haashmap {
+public class Hashmap {
     public static void main(String[] args) {
 
         HashMap<Integer,String> ids=new HashMap<>();
