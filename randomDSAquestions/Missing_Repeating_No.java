@@ -4,7 +4,7 @@ public class Missing_Repeating_No {
 
     public static void main(String[] args) {
         {
-            int[] arr = { 7, 3, 4, 5, 5, 6, 2, 2 };
+            int[] arr = { 7, 3, 4, 5, 5, 6, 2, 2,5,5 };
             int n = arr.length;
             repeating(arr, n);
         }
@@ -18,7 +18,7 @@ public class Missing_Repeating_No {
 
         for (int i = 0; i < arr.length; i++) {
             temp[arr[i] - 1]++;
-            if (temp[arr[i] - 1] > 1) {
+            if (temp[arr[i] - 1] > n/3) {
                 repeat = arr[i];
                 System.out.println(repeat);
 
