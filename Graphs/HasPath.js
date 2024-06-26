@@ -8,6 +8,12 @@ const graph={ //Acyclic graph no infinite loops
     e:[],
     f:[]
 }
+const city={
+    chennai:["banglore"],
+    mumbai:["delhi"],
+    goa:["chennai"],
+    delhi:['goa']
+}
 
 const has=(graph,src,dest)=>{ //dfs
 
@@ -23,4 +29,4 @@ const has=(graph,src,dest)=>{ //dfs
 
 }
 
-console.log(has(graph,'a','e'))
+console.log(has(city,'goa','mumbai'))
