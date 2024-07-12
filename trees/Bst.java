@@ -10,6 +10,8 @@ package trees;
 //level is the subtraction of height of root and height of node ,so root level  =0 ,level start with 0
 //leaf node are the bottom most nodes 
 
+import java.util.Scanner;
+
 //types of binary tree-
 //1-complete binary tree-all level full ,last full from left to right
 //2-strict binary tree/full binary tree - each node has either 0 or 2 childern      use case-compression
@@ -33,12 +35,85 @@ package trees;
 //1-linked repesentatio
 //2-sequential repesentation ,using array used in implementation of heap
 
+//height difference of the balanced tree should be less than equal to 1
+
 
 
 
 public class Bst {
-    public static void main(String[] args) {
+   
+    private static class Node {
+        Node left;
+        Node right;
+        int value;
+
+        public Node(int value){
+            this.value=value;
+        }
+
+    
         
     }
-    
+    private Node root;
+
+    public void insert(Scanner scanner){
+        System.out.println("enter the root node");
+        int val=scanner.nextInt();
+        root =new Node(val);
+
+        inserting(scanner,root);
+
+    }
+
+    public void inserting(Scanner scanner,Node node){
+        System.out.println("Do u want to enter on the left node of "+ node.value);
+        boolean left=scanner.nextBoolean();
+        if (left) {
+            System.out.println("Enter the value on the left of "+ node.value);
+            int leftVal=scanner.nextInt();
+            node.left=new Node(leftVal);
+            inserting(scanner, node.left);
+        }
+        System.out.println("Do u want to enter on the right node of "+ node.value);
+        boolean right=scanner.nextBoolean();
+
+        if(right){
+            System.out.println("Enter the value on the right of "+ node.value);
+            int rightVal=scanner.nextInt();
+            node.right=new Node(rightVal);
+            inserting(scanner, node.right);
+            
+        }
+
+
+    }
+    public void display(){
+        
+        display(root,"");
+
+    }
+
+    private void display(Node node,String Indent){
+        if(node==null){
+            return;
+        }
+        
+        System.out.println(Indent+node.value);
+        display(node.left,Indent+"\t");
+        display(node.right,Indent + "\t");
+
+
+
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Bst tree=new Bst();
+        tree.insert(sc);
+        tree.display();
+        
+    }
 }
+
+
+
+
