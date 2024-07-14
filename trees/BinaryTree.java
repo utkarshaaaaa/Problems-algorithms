@@ -36,7 +36,7 @@ import java.util.Scanner;
 //2-sequential repesentation ,using array used in implementation of heap
 
 //height difference of the balanced tree should be less than equal to 1
-//depth of a node= |height of lefdft node- height of rigfht node|
+//depth of a node= |height of lefdft node- height of rigfht node| it should be less than equal to 1 to be a balanced tree
 
 
 
