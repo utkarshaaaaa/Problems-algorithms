@@ -37,6 +37,7 @@ import java.util.Scanner;
 
 //height difference of the balanced tree should be less than equal to 1
 //depth of a node= |height of lefdft node- height of rigfht node| it should be less than equal to 1 to be a balanced tree
+//we use AVL tree ans red black tree for making unbalance tree to balance
 
 
 
