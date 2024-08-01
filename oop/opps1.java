@@ -1,5 +1,7 @@
 package oop;
 
+import String.strings;
+
 //objects are stored in heap memory , reference variables are stored in stack memory
 //variables inside object are known as instance variable
 //new, dynamically alorts  -allocate the memory at the run time and returns a reference to it
@@ -12,9 +14,21 @@ package oop;
 //"this" keyword 
  class Inneropps1 {
     int value;
+    strings name;
+    public Inneropps1(int val,strings name){
+        this.value=val;
+        this.name=name;
+
+
+    }
     public Inneropps1(int val){
         this.value=val;
 
+
+    }
+
+    public Inneropps1(Inneropps1 other){
+        this.value=other.value;
 
     }
 
@@ -29,7 +43,7 @@ public class opps1 {
     public static void main(String[] args) {
         
 
-        Inneropps1 i=new Inneropps1(20);
+        Inneropps1 i=new Inneropps1(10);
         System.out.println(i.value);
          
 
