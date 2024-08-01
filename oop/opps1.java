@@ -12,10 +12,11 @@ import String.strings;
 //some variables
 
 //"this" keyword 
+//primitives are not objects they are stored in stack memory
  class Inneropps1 {
     int value;
-    strings name;
-    public Inneropps1(int val,strings name){
+    String name;
+    public Inneropps1(int val,String name){
         this.value=val;
         this.name=name;
 
@@ -43,7 +44,7 @@ public class opps1 {
     public static void main(String[] args) {
         
 
-        Inneropps1 i=new Inneropps1(10);
+        Inneropps1 i=new Inneropps1(10,"hbufw");
         System.out.println(i.value);
          
 
