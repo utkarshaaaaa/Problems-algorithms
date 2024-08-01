@@ -12,7 +12,10 @@ import String.strings;
 //some variables
 
 //"this" keyword 
-//primitives are not objects they are stored in stack memory
+//primitives are not objects they are stored in stack memory(Boolean, char, byte, int, short, long, float, and double )
+//"final " keyword cannot be changed (constant value) and it should be initialized while declaring it (it should be premitive type)
+//if it is not premitive , we can change the value vut cannit reassign it
+//Finalize method will be called whe the java is doing garbage colllection
  class Inneropps1 {
     int value;
     String name;
@@ -44,8 +47,13 @@ public class opps1 {
     public static void main(String[] args) {
         
 
-        Inneropps1 i=new Inneropps1(10,"hbufw");
-        System.out.println(i.value);
+        Inneropps1 i=new Inneropps1(10);
+        Inneropps1 n=new Inneropps1(21);
+        Inneropps1 j=n;
+        n.value=12;
+        System.out.println(j.value);
+
+
          
 
     }
