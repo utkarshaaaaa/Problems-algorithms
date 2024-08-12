@@ -31,6 +31,8 @@ public class binarysearch {
 
     }
 
+    
+
     static int BinarySearch(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
