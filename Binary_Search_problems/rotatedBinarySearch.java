@@ -47,10 +47,10 @@ public class rotatedBinarySearch {
                 return new int[]{arr[low],arr[high]};
             }
             if(sum > target){
-                low=low+1;
+                high=high-1;
             }
             else{
-                high=high-1;
+                low=low+1;
             }
             
         }
@@ -60,7 +60,7 @@ public class rotatedBinarySearch {
 
     public static void main(String[] args) {
         int[] arr = { 5, 6, 7, 1, 2, 3, 4 };
-        System.out.println(Arrays.toString( findSumForSortedArray(arr, 10))  );
+        System.out.println(Arrays.toString( findSumForSortedArray(arr, 8))  );
     }
 
 } 
