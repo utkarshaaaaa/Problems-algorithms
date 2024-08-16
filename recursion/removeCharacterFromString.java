@@ -19,6 +19,7 @@ public class removeCharacterFromString {
 
         System.out.println(remove("sdaubaubauybuybaub",-1));
         System.out.println(str.substring(3, 6));
+        
 
     }
 
