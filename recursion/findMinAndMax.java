@@ -1,4 +1,5 @@
 package recursion;
+//min max using recurssion
 
 public class findMinAndMax {
     static int min(int[] arr,int indx,int min){
