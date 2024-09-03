@@ -15,6 +15,6 @@ public class backTracking {
         System.out.println(numberOfPath(3, 3));
         
     }
-    static void 
+   
     
 }
