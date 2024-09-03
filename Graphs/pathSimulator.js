@@ -99,8 +99,6 @@ class AStar {
   }
 }
 
-
-// Create the graph (ports and routes)
 const graph = new Graph();
 ["A", "B", "C", "D", "E"].forEach((node) => graph.addNode(node));
 

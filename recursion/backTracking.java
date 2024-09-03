@@ -7,13 +7,14 @@ public class backTracking {
 
         }
         int right=numberOfPath(row-1, column);
-        int dowm=numberOfPath(row, column-1);
+        int down=numberOfPath(row, column-1);
        
-        return right + dowm;
+        return right + down;
     }
     public static void main(String[] args) {
         System.out.println(numberOfPath(3, 3));
         
     }
+    static void 
     
 }

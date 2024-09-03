@@ -13,12 +13,29 @@ public class removeCharacterFromString {
         }
         return remove(str, indx + 1);
     }
+    static String removeString(String ch){
+
+        if(ch.isEmpty()){
+            return "";
+        }
+        char fchar=ch.charAt(0);
+        if (ch.startsWith("nice")) {
+            return removeString( ch.substring(4));
+            
+        }else{
+
+            return fchar + removeString(ch.substring(1));
+        }
+
+
+    }
 
     public static void main(String[] args) {
         String str="sdaubaubauybuybaub";
 
         System.out.println(remove("sdaubaubauybuybaub",-1));
         System.out.println(str.substring(3, 6));
+        System.out.println(removeString("xiubwuibniceiubib"));
         
 
     }
