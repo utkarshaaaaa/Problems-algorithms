@@ -6,10 +6,10 @@ public class pathDirection {
             System.out.println(p);
             return;
         }
-        if(s>=1){
+        if(s>1){
             path(p+'R', s-1, e);
         }
-        if(e>=1){
+        if(e>1){
             path(p+'B', s, e-1);
         }
 
