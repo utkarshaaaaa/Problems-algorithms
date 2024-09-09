@@ -27,6 +27,7 @@ public class combinationOfNumbersArray {
 
     public static void main(String[] args) {
         int[] arr={2,3,4,1,4,5};
+        System.out.println("All the possible combinations are: ");
         System.out.println(find(arr));
 
         
