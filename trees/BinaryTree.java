@@ -1,5 +1,6 @@
 package trees;
 //delete ,add  and searh in o(logN)
+
 //cost efficient
 //o 1 or 2 childern only
 //unbalance bt has o(n)(limitation of bt)
@@ -39,83 +40,74 @@ import java.util.Scanner;
 //depth of a node= |height of lefdft node- height of rigfht node| it should be less than equal to 1 to be a balanced tree
 //we use AVL tree ans red black tree for making unbalance tree to balance
 
-
-
-
 public class BinaryTree {
-   
+
     private static class Node {
         Node left;
         Node right;
         int value;
 
-        public Node(int value){
-            this.value=value;
+        public Node(int value) {
+            this.value = value;
         }
 
-    
-        
     }
+
     private Node root;
 
-    public void insert(Scanner scanner){
+    public void insert(Scanner scanner) {
         System.out.println("enter the root node");
-        int val=scanner.nextInt();
-        root =new Node(val);
+        int val = scanner.nextInt();
+        root = new Node(val);
 
-        inserting(scanner,root);
+        inserting(scanner, root);
 
     }
 
-    public void inserting(Scanner scanner,Node node){
-        System.out.println("Do u want to enter on the left node of "+ node.value);
-        boolean left=scanner.nextBoolean();
+    public void inserting(Scanner scanner, Node node) {
+        System.out.println("Do u want to enter on the left node of " + node.value);
+        boolean left = scanner.nextBoolean();
         if (left) {
-            System.out.println("Enter the value on the left of "+ node.value);
-            int leftVal=scanner.nextInt();
-            node.left=new Node(leftVal);
+            System.out.println("Enter the value on the left of " + node.value);
+            int leftVal = scanner.nextInt();
+            node.left = new Node(leftVal);
             inserting(scanner, node.left);
         }
-        System.out.println("Do u want to enter on the right node of "+ node.value);
-        boolean right=scanner.nextBoolean();
+        System.out.println("Do u want to enter on the right node of " + node.value);
+        boolean right = scanner.nextBoolean();
 
-        if(right){
-            System.out.println("Enter the value on the right of "+ node.value);
-            int rightVal=scanner.nextInt();
-            node.right=new Node(rightVal);
+        if (right) {
+            System.out.println("Enter the value on the right of " + node.value);
+            int rightVal = scanner.nextInt();
+            node.right = new Node(rightVal);
             inserting(scanner, node.right);
-            
+
         }
 
-
-    }
-    public void display(){
-        
-        display(root,"");
-
     }
 
-    private void display(Node node,String Indent){
-        if(node==null){
+    public void display() {
+
+        display(root, "");
+
+    }
+
+    private void display(Node node, String Indent) {
+        if (node == null) {
             return;
         }
-        
-        System.out.println(Indent+node.value);
-        display(node.left,Indent+"\t");
-        display(node.right,Indent + "\t");
 
-
+        System.out.println(Indent + node.value);
+        display(node.left, Indent + "\t");
+        display(node.right, Indent + "\t");
 
     }
+
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        BinaryTree tree=new BinaryTree();
+        Scanner sc = new Scanner(System.in);
+        BinaryTree tree = new BinaryTree();
         tree.insert(sc);
         tree.display();
-        
+
     }
 }
-
-
-
-

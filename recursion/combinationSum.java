@@ -10,7 +10,7 @@ public class combinationSum {
         if (indx == candidates.length) {
             if (target == 0) {
                 res.add(new ArrayList<>(cur));
-
+ 
             }
             return;
         }
@@ -35,7 +35,7 @@ public class combinationSum {
 
     public static void main(String[] args) {
         int[] candidates = { 2, 3, 6, 7 };
-        System.out.println(combinations(candidates, 7));
+        System.out.println(combinations(candidates, 9));
 
     }
 
