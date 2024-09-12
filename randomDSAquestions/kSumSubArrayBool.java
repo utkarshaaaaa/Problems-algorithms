@@ -8,7 +8,7 @@ import java.util.Arrays;
 //sum of every iteration in the arr array and add it to the hashset 
 //check if the item at the index at sumArr - k(total) exist in the sumList if yes return true
 //note**
-//HashSet is used when u hav eto traverse the list in constant time which reduces the TC
+//HashSet is used when u have to traverse the list in constant time which reduces the TC
 public class kSumSubArrayBool {
 
     static boolean findSubarraySum(int[] arr,int total){
