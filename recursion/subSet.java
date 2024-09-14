@@ -14,6 +14,7 @@ public class subSet {
     }
     static ArrayList<String> retSub(String p,String up){
         if(up.length()==0){
+            
             ArrayList<String> list=new ArrayList<>();
             list.add(p);
             return list;
@@ -26,9 +27,9 @@ public class subSet {
         return left;
     }
     public static void main(String[] args) {
-        sub("abcd","");
+        sub("aab","");
 
-        System.out.println(retSub("", "abc"));
+        System.out.println(retSub("", "aab"));
 
 
         
