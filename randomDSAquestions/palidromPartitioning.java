@@ -34,13 +34,7 @@ public class palidromPartitioning {
             lists.add(new ArrayList<>(arr));
             return;
         }
-        if(isPalidrom(a, a.charAt(0), a.charAt(a.length()-1))){
-            arr.add(a);
-            helper(lists, a.substring(indx), indx+1, arr);
-            lists.remove(arr.size()-1);
-            helper(lists, a.substring(indx), indx+1, arr);
-             
-        }
+       
        
 
 
@@ -49,8 +43,13 @@ public class palidromPartitioning {
 
 
     }
+   
     public static void main(String[] args) {
-        System.out.println(Partitioning("aab"));
+        // System.out.println(Partitioning("aab"));
+        
+       
+       
+
 
         
     }
