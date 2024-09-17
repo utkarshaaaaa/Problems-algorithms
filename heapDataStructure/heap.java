@@ -1,5 +1,5 @@
 package heapDataStructure;
-//heapes are complete Binart tree
+//heapes are complete Binary tree
 //Min heap :- value of root node nodes is less than or equal to its child nodes
 //Hax heap :- value of root node nodes is greater than or equal to its child nodes
 //Time complexity- log2(N) for searching o(n)
@@ -16,7 +16,7 @@ public class heap {
         capacity=arr.length;
 
     }
-    public void swap(int i,int j,int[] arr){
+    public void swap(int i,int j){
         int k=heap[i];
         heap[i]=heap[j];
         heap[j]=k;
@@ -41,7 +41,8 @@ public class heap {
             largest=rightNode;
         }
         if(indx!=largest){
-            swap(indx, rightNode, heap);
+            swap(indx, largest);
+            heapify(largest);
         }
         
         
