@@ -16,32 +16,32 @@ public class heap {
         capacity=arr.length;
 
     }
-    static void swap(int i,int j,int[] arr){
-        int k=i;
-        i=j;
-        j=k;
+    public void swap(int i,int j,int[] arr){
+        int k=heap[i];
+        heap[i]=heap[j];
+        heap[j]=k;
 
     }
-    static void buildHeap(int n,int[] tree){
+    public void buildHeap(int n,int[] tree){
         
-        for( int i=n/2-1;i>=0;i--){
-            heapify(i, tree);
+        for( int i=heapSize/2-1;i>=0;i--){
+            heapify(i);
         }
         
 
     }
-    static void heapify(int indx, int[] tree){
+    public void heapify(int indx){
         int largest=indx;
         int leftNode=2*indx +1;
         int rightNode=2*indx+2;
-        if(indx>0 && tree[leftNode] > tree[largest]){
+        if(indx>0 && heap[leftNode] > heap[largest]){
             largest=leftNode;
         }
-        if(indx>0 && tree[rightNode] > tree[largest]){
+        if(indx>0 && heap[rightNode] > heap[largest]){
             largest=rightNode;
         }
         if(indx!=largest){
-            swap(indx, rightNode, tree);
+            swap(indx, rightNode, heap);
         }
         
         
