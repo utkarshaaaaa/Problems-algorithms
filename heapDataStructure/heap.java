@@ -16,7 +16,34 @@ public class heap {
         capacity=arr.length;
 
     }
-    static void heapify(){
+    static void swap(int i,int j,int[] arr){
+        int k=i;
+        i=j;
+        j=k;
+
+    }
+    static void buildHeap(int n,int[] tree){
+        
+        for( int i=n/2-1;i>=0;i--){
+            heapify(i, tree);
+        }
+        
+
+    }
+    static void heapify(int indx, int[] tree){
+        int largest=indx;
+        int leftNode=2*indx +1;
+        int rightNode=2*indx+2;
+        if(indx>0 && tree[leftNode] > tree[largest]){
+            largest=leftNode;
+        }
+        if(indx>0 && tree[rightNode] > tree[largest]){
+            largest=rightNode;
+        }
+        if(indx!=largest){
+            swap(indx, rightNode, tree);
+        }
+        
         
     }
     public static void main(String[] args) {
