@@ -36,6 +36,7 @@ public class combinationSum {
     public static void main(String[] args) {
         int[] candidates = { 2, 3, 6, 7 };
         List<List<Integer>>  li= combinations(candidates, 9);
+        System.out.println(li);
        
 
     }
