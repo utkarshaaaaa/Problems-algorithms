@@ -45,9 +45,10 @@ public class kuniqueCharacterMaxLength {
         }
         return (maxlen == Integer.MIN_VALUE) ? -1 : maxlen;
     }
+
     public static void main(String[] args) {
-        System.out.println(sw("wagaggsggdggsyysytyt", 4));
-        
+        System.out.println(sw("wagaggsggdggsyysyt", 4));
+
     }
-    
+
 }
